@@ -7,7 +7,7 @@ require(["esri/views/MapView", "esri/WebMap", "esri/layers/FeatureLayer","esri/w
    * To load a WebMap from an on-premise portal, set the portal
    * url with esriConfig.portalUrl.
    ************************************************************/
-
+  //try to add new comments to the repository
   
   const webmap = new WebMap({
     portalItem: {
