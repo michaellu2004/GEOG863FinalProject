@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Trip Organizer</title>
+    <link rel="stylesheet" href="main.css"></link>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.30/"></script>
+    <script src="https://js.arcgis.com/calcite-components/2.6.0/calcite.esm.js" type="module"></script>   
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.6.0/calcite.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <calcite-shell content-behind>
+      <h2 id="header-title" slot = "header">
+        <!--Populate at runtime-->
+      </h2>
+
+      <calcite-shell-panel slot="panel-start" display-mode="float">
+        <calcite-action-bar slot="action-bar">
+          <calcite-action data-action-id="layers" icon="layers" text = "Layers">
+          </calcite-action>
+          <calcite-action data-action-id="basemaps" icon="basemap" text="Basemaps">
+          </calcite-action>
+        </calcite-action-bar>
+
+        <calcite-panel heading="Layers" data-panel-id="layers" hidden>
+          <div id="layers-container"></div>
+        </calcite-panel>
+
+        <calcite-panel heading="Basemaps" height-scale="l" data-panel-id="basemaps" hidden>   
+          <div id="basemaps-container"></div>   
+        </calcite-panel>
+      </calcite-shell-panel>
+      
+      <div id="viewDiv"></div>
+      
+
+      <calcite-shell-panel slot="panel-end">
+        <calcite-panel heading="Trip organizer">
+          <calcite-block
+          heading="Date Range",
+          description="select dates for the trip",
+          id="calcite-blockdaterange"
+         open>
+         <calcite-input-date-picker id="dateFrom" scale="s">
+         </calcite-input-date-picker>
+         to
+         <calcite-input-date-picker id="dateTo" scale="s">
+         </calcite-input-date-picker>
+         <calcite-button id="getTripButton">Get Trip Info</calcite-button>
+         <calcite-notice kind="info" icon="thumbs-up" id="notice">
+          <div slot="message" id="tripCount"></div>
+         </calcite-notice>
+        </calcite-block>
+        </calcite-panel>
+      </calcite-shell-panel>
+
+    </calcite-shell>
+
+  </body>
+</html>
+<!DOCTYPE html>

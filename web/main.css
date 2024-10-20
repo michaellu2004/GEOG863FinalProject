@@ -1,0 +1,30 @@
+html, body, #viewDiv{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+#header-title{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#getFireButton{
+  margin: 10px;
+}
+.esri-ui-manual-container>.esri-component.esri-search {
+  position: absolute;
+  left: 120px;
+  top: 20px;
+}
+#getTripButton{
+  margin: 10px;
+}
+#infoDiv {
+  margin: 0; /* Remove margins to fit within the panel */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  overflow: auto;
+  height: 100%; /* Ensure it takes the full height of the panel */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
